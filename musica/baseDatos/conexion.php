@@ -6,7 +6,7 @@ $direccion=10.128.180.125';
 $usuario='root';
 $contrasena='rootroot';
 //$contrasena='';
-$base='musica';
+$base='spotify';
  $conexion1=mysqli_connect($direccion,$usuario,$contrasena,$base);
 return $conexion1;
 
