@@ -2,7 +2,7 @@
 // primero establecer la conexion con la base de datos 
 function conexion(){
 
-$direccion='localhost';
+$direccion='10.131.41.65';
 $usuario='root';
 //$contrasena='rootroot';
 $contrasena='';
