@@ -8,13 +8,13 @@ function pedirCancion($cancion,$pedido,$conexion1){
 	if($registro=mysqli_fetch_array($linea)){
 		//echo $registro['UnitPrice'];
 		/*sacamos el ultimo registro de la tabla invoiceline*/
-		$sentencia1='select max(InvoiceLineId)as a1 from Invoiceline;';
+		$sentencia1='select max(InvoiceLineId)as a1 from InvoiceLine';
 		echo $sentencia1;
 		$linea1=mysqli_query($conexion1,$sentencia1);
 		if($registro1=mysqli_fetch_array($linea1)){
 			$reg=$registro1['a1']+1;
 			/*ingresamos el registro en la tabla invoiceline */
-	$sentencia2='insert into Invoiceline
+	$sentencia2='insert into InvoiceLine
 	(InvoiceLineId,InvoiceId,TrackId,UnitPrice,Quantity)
 	value('.$reg.','.$pedido.','.$cancion.','.$registro['UnitPrice'].',1)';
 	echo $sentencia2;
